@@ -17,30 +17,65 @@
         rel="stylesheet">
 
     <!-- custom css style  -->
-    <style>
-        body{
-            font-family: "Mulish", sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
     <!-- Start header section  -->
     <header class="container mx-auto">
+        <!-- navber section  -->
         <section class="flex justify-between items-center my-10">
             <div>
                 <img src="./images/logo.png" alt="">
             </div>
             <div class="flex justify-end gap-4 items-center">
-                <div class="bg-[#12132d1e] rounded-full"><img class="p-4" src="./images/home.png" alt=""></div>
-                <div class="bg-[#12132d1e] rounded-full"><img class="p-4" src="./images/edit.png" alt=""></div>
-                <div class="bg-[#12132d1e] rounded-full"><img class="p-4" src="./images/add.png" alt=""></div>
-                <div class="bg-[#12132d1e] rounded-full"><img class="p-4" src="./images/flag.png" alt=""></div>
+                <div class="bg-[#12132d1e] rounded-full cursor-pointer" title="Home"><img class="p-4"
+                        src="./images/home.png" alt=""></div>
+                <div class="bg-[#12132d1e] rounded-full cursor-pointer" title="Edit"><img class="p-4"
+                        src="./images/edit.png" alt=""></div>
+                <div class="bg-[#12132d1e] rounded-full cursor-pointer" title="Add"><img class="p-4"
+                        src="./images/add.png" alt=""></div>
+                <div class="bg-[#12132d1e] rounded-full cursor-pointer" title="Flag"><img class="p-4"
+                        src="./images/flag.png" alt=""></div>
                 <div>
                     <button class="bg-[#797dfc] py-5 px-10 rounded-full text-xl font-bold text-white">Sign In</button>
                 </div>
             </div>
         </section>
+        <!-- navber section  -->
+        <!-- banner section  -->
+        <section class="bg-[url('./images/bgbanner.png')] bg-no-repeat bg-cover bg-[#12132d] rounded-[52px] ">
+            <div class="flex justify-around items-center py-[170px]">
+                <div class="space-y-8">
+                    <h1 class="text-white text-6xl font-extrabold leading">Welcome to the <br><span class="gradient-span">ReTro</span> Forum</h1>
+                    <p class="text-xl text-white leading-9">Share your favorite opinion and win and wp <br>  forum coffee mug!</p>
+                    <div class="bg-white w-[400px] flex justify-between items-center p-2 gap-3 rounded-full">
+                        <input type="text" name="" id="" placeholder="Search here anything" class="w-full p-2 rounded-full">
+                        <button class="py-3 px-7 bg-[#797DFC] rounded-full text-white font-bold text-lg">Search</button>
+                    </div>
+                </div>
+                <div class="flex flex-col p-12 gap-5 w-[371px] bg-[#FFFFFF] rounded-3xl">
+                    <div class="text-2xl flex justify-between items-center">
+                        <p>Registered Users</p>
+                        <p>01</p>
+                    </div>
+                    <div class="text-2xl flex justify-between items-center">
+                        <p>Forum</p>
+                        <p>01</p>
+                    </div>
+                    <div class="text-2xl flex justify-between items-center">
+                        <p>Topics</p>
+                        <p>01</p>
+                    </div>
+                    <div class="text-2xl flex justify-between items-center">
+                        <p>Replies</p>
+                        <p>01</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- banner section  -->
+
     </header>
     <!--End header section  -->
     <!--Start main section  -->
