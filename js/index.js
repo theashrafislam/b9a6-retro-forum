@@ -10,14 +10,14 @@ const allPostDisplay = (posts) => {
     // console.log(posts);
     const postContainer = document.getElementById('post-container');
     posts.forEach(post => {
-        // console.log(post);
+        console.log(post);
         const div = document.createElement('div');
         // div.classList.add(`w-full md:w-3/5 flex gap-4 bg-[#F3F3F5] p-6 rounded-3xl`);
         div.innerHTML = `
         <div class="w-full  flex gap-4 bg-[#F3F3F5] p-6 rounded-3xl">
                 <div class="w-1/6  md:pl-6">
-                <img class="absolute w-24" src="${post.image}" alt="">
-                <div class="w-3 h-3 md:w-4 md:h-4 bg-green-500 rounded-full relative lg:top-[-8px] lg:ml-[0px] top-[-6px] left-[89px]"></div>
+                <img class="absolute w-16 lg:w-24" src="${post.image}" alt="">
+                <div class="w-3 h-3 md:w-4 md:h-4 bg-green-500 rounded-full relative lg:top-[-8px] lg:ml-[0px] top-[-6px] left-[57px]"></div>
                 <div class="w-3 h-3 md:w-4 md:h-4 bg-red-500 rounded-full relative lg:top-[-8px] lg:ml-[0px] top-[-6px] left-[89px]"></div>
                 </div>
                     <div class="w-5/6">
@@ -45,7 +45,7 @@ const allPostDisplay = (posts) => {
                             </span>
                         </div>
                         <div>
-                            <button onclick="readBtn(${post?.id})"><img src="./images/mes-box.png" alt=""></button>
+                            <button class="countButton" onclick="readBtn('${post?.title}', '${post?.view_count}')"><img src="./images/mes-box.png" alt=""></button>
                         </div>
                     </div>
                 </div>
@@ -57,12 +57,27 @@ const allPostDisplay = (posts) => {
 
 const titleCount = document.getElementById('title-count');
 const viewCount = document.getElementById('view-count');
+const titleViewCount = document.getElementById('titleViewCount');
+const read = document.getElementById('read');
+let readCount = 0;
+function readBtn(title, view){
+    // console.log('title', title)
+    // console.log('view', view)
+    const div = document.createElement('div');
+    div.classList.add('flex', 'justify-between', 'items-center', 'bg-[#FFFFFF]', 'gap-2', 'p-4', 'rounded-xl', 'mt-3');
+    div.innerHTML = `
+    <div>
+        <h1 id="title-count">${title}</h1>
+    </div>
+    <div>
+        <p class="flex"><img src="./images/view.png" alt=""> <span id="view-count">${view}</span></p>
+    </div>
+    `;
+    readCount = readCount + 1;
+    read.innerText = readCount;
+    titleViewCount.appendChild(div);
 
-const readBtn = async (id) => {
-    console.log(id);
-    // titleCount.innerText = ${id};
 }
-
 
 
 const latestPosts = async () => {
@@ -72,7 +87,7 @@ const latestPosts = async () => {
     const lMainContainer = document.getElementById('l-main-container')
     const latestContainer = document.getElementById('latest-container');
     data.forEach(item => {
-        console.log(item)
+        // console.log(item)
 
         const div = document.createElement('div');
         div.classList.add('rounded-3xl', 'border-2', 'space-y-4', 'p-6');
