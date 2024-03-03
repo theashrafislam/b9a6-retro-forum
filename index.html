@@ -27,53 +27,53 @@
     <!-- Start header section  -->
     <header class="container mx-auto">
         <!-- navber section  -->
-        <section class="flex justify-between items-center my-10">
+        <section class="flex justify-between items-center my-10 flex-col md:flex-row">
             <div>
                 <img src="./images/logo.png" alt="">
             </div>
-            <div class="flex justify-end gap-4 items-center">
-                <div class="bg-[#12132d1e] rounded-full cursor-pointer" title="Home"><img class="p-4"
+            <div class="flex justify-end gap-4 items-center mx-6 md:mx-0">
+                <div class="bg-[#12132d1e] rounded-full cursor-pointer" title="Home"><img class="p-2 md:p-4"
                         src="./images/home.png" alt=""></div>
-                <div class="bg-[#12132d1e] rounded-full cursor-pointer" title="Edit"><img class="p-4"
+                <div class="bg-[#12132d1e] rounded-full cursor-pointer" title="Edit"><img class="p-2 md:p-4"
                         src="./images/edit.png" alt=""></div>
-                <div class="bg-[#12132d1e] rounded-full cursor-pointer" title="Add"><img class="p-4"
+                <div class="bg-[#12132d1e] rounded-full cursor-pointer" title="Add"><img class="p-2 md:p-4"
                         src="./images/add.png" alt=""></div>
-                <div class="bg-[#12132d1e] rounded-full cursor-pointer" title="Flag"><img class="p-4"
+                <div class="bg-[#12132d1e] rounded-full cursor-pointer" title="Flag"><img class="p-2 md:p-4"
                         src="./images/flag.png" alt=""></div>
                 <div>
-                    <button class="bg-[#797dfc] py-5 px-10 rounded-full text-xl font-bold text-white">Sign In</button>
+                    <button class="bg-[#797dfc] py-3 md:py-5 px-5 md:px-10 rounded-full text-base md:text-xl font-bold text-white">Sign In</button>
                 </div>
             </div>
         </section>
         <!-- navber section  -->
         <!-- banner section  -->
-        <section class="bg-[url('./images/bgbanner.png')] bg-no-repeat bg-cover bg-[#12132d] rounded-[52px] ">
-            <div class="flex justify-around items-center py-[170px]">
-                <div class="space-y-8">
-                    <h1 class="text-white text-6xl font-extrabold leading">Welcome to the <br><span
+        <section class="bg-[url('./images/bgbanner.png')] bg-no-repeat bg-cover bg-[#12132d] rounded-[52px] mx-6 md:mx-0">
+            <div class="flex justify-around items-center py-[170px] flex-col md:flex-row">
+                <div class="space-y-8 text-center md:text-left">
+                    <h1 class="text-white text-4xl md:text-6xl font-extrabold leading">Welcome to the <br><span
                             class="gradient-span">ReTro</span> Forum</h1>
-                    <p class="text-xl text-white leading-9">Share your favorite opinion and win and wp <br> forum coffee
+                    <p class="text-base md:text-xl text-white leading-9">Share your favorite opinion and win and wp <br> forum coffee
                         mug!</p>
-                    <div class="bg-white w-[400px] flex justify-between items-center p-2 gap-3 rounded-full">
+                    <div class="bg-white w-[350px] md:w-[400px] flex justify-between items-center p-2 gap-3 rounded-full">
                         <input type="text" name="" id="" placeholder="Search here anything"
                             class="w-full p-2 rounded-full">
-                        <button class="py-3 px-7 bg-[#797DFC] rounded-full text-white font-bold text-lg">Search</button>
+                        <button class="py-3 px-7 bg-[#797DFC] rounded-full text-white font-bold text-base md:text-lg">Search</button>
                     </div>
                 </div>
-                <div class="flex flex-col p-12 gap-5 w-[371px] bg-[#FFFFFF] rounded-3xl">
-                    <div class="text-2xl flex justify-between items-center">
+                <div class="flex flex-col p-12 gap-5 w-[300px] mt-10 md:mt-0 md:w-[371px] bg-[#FFFFFF] rounded-3xl">
+                    <div class="text-xl md:text-2xl flex justify-between items-center">
                         <p>Registered Users</p>
                         <p>01</p>
                     </div>
-                    <div class="text-2xl flex justify-between items-center">
+                    <div class="text-xl md:text-2xl flex justify-between items-center">
                         <p>Forum</p>
                         <p>05</p>
                     </div>
-                    <div class="text-2xl flex justify-between items-center">
+                    <div class="text-xl md:text-2xl flex justify-between items-center">
                         <p>Topics</p>
                         <p>01</p>
                     </div>
-                    <div class="text-2xl flex justify-between items-center">
+                    <div class="text-xl md:text-2xl flex justify-between items-center">
                         <p>Replies</p>
                         <p>01</p>
                     </div>
@@ -86,16 +86,16 @@
     <!--Start main section  -->
     <main class="container mx-auto">
         <!-- lets discuss section  -->
-        <section class="my-24">
+        <section class="my-24 mx-6 md:mx-0">
             <div class="text-center">
-                <h1 class="text-4xl font-extrabold mb-6">Let’s Discuss</h1>
-                <p class="text-lg">Yes, you can run unit tests and view the results directly within the app. The
+                <h1 class="text-3xl md:text-4xl font-extrabold mb-6">Let’s Discuss</h1>
+                <p class="text-base md:text-lg">Yes, you can run unit tests and view the results directly within the app. The
                     <br>integrated testing features allow for a streamlined .</p>
             </div>
             <!-- content section  -->
-            <div class="flex gap-8 mt-10 ">
-                <div class="w-3/5 flex gap-4 bg-[#F3F3F5] p-6 rounded-3xl">
-                    <div class="w-1/6 pl-6">
+            <div class="flex gap-8 mt-10 flex-col md:flex-row">
+                <div class="w-full md:w-3/5 flex gap-4 bg-[#F3F3F5] p-6 rounded-3xl">
+                    <div class="w-1/6  md:pl-6">
                         <img src="./images/author-img.png" alt="">
                     </div>
                     <div class="w-5/6">
@@ -103,24 +103,24 @@
                             <span class="text-sm text-[#12132DCC] font-bold">#Music</span>
                             <p class="text-sm text-[#12132DCC] font-bold">Author: <span>Awlad Hossain</span></p>
                         </div>
-                        <div class="pb-6 border-b-4 border-dashed space-y-3">
+                        <div class="pb-6 border-b-2 border-dashed space-y-3">
                             <h2 class="text-xl font-bold">10 Kids Unaware of Their Halloween Costume</h2>
                             <p class="text-[#12132D99] text-lg">It’s one thing to subject yourself to ha Halloween
                                 costume mishap because, hey that’s your prerogative</p>
                         </div>
-                        <div class="pt-6 flex justify-between items-center gap-5">
+                        <div class="pt-6 flex justify-between items-center md:gap-5 gap-2">
                             <div class="flex gap-4">
-                                <span class="flex gap-2">
+                                <span class="flex justify-center items-center gap-2">
                                     <img src="./images/comment.png" alt="">
                                     <p>560</p>
                                 </span>
-                                <span class="flex gap-2">
+                                <span class="flex justify-center items-center gap-2">
                                     <img src="./images/view.png" alt="">
                                     <p>1,568</p>
                                 </span>
-                                <span class="flex gap-2">
+                                <span class="flex justify-center items-center gap-2">
                                     <img src="./images/time.png" alt="">
-                                    <p>5 min</p>
+                                    <p class="text-nowrap">5 min</p>
                                 </span>
                             </div>
                             <div>
@@ -129,7 +129,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-2/5 bg-[#F3F3F4] p-6 rounded-3xl">
+                <div class=" w-full md:w-2/5 bg-[#F3F3F4] p-6 rounded-3xl">
                     <div class="flex justify-between">
                         <h2 class="font-bold text-xl">Title</h2>
                         <div class="flex gap-3">
@@ -148,12 +148,12 @@
         </section>
         <!-- lets discuss section  -->
         <!-- registered section  -->
-        <section class="flex gap-6 p-12 bg-[#12132D] justify-around rounded-3xl items-center mb-10">
+        <section class="flex flex-col md:flex-row gap-6 p-12 bg-[#12132D] justify-around rounded-3xl items-center mb-10 mx-6 md:mx-0">
             <div class="space-y-5">
-                <h1 class="text-white text-4xl font-extrabold">Join Our Forum</h1>
-                <p class="text-[#FFFFFFCC] text-lg">Share your favorite opinion and win and wp forum coffee mug! Yes,
+                <h1 class="text-white text-3xl font-extrabold md:text-4xl">Join Our Forum</h1>
+                <p class="text-[#FFFFFFCC] text-base md:text-lg">Share your favorite opinion and win and wp forum coffee mug! Yes,
                     you can <br> run unit tests and view the results directly within the app. </p>
-                <button class="px-10 py-5 bg-[#797DFC] text-xl font-bold text-white rounded-full">Registered
+                <button class="px-7 py-3 md:px-10 md:py-5 bg-[#797DFC] text-base md:text-xl font-bold text-white rounded-full">Registered
                     Now</button>
             </div>
             <div>
@@ -162,14 +162,14 @@
         </section>
         <!-- registered section  -->
         <!-- latest post section  -->
-        <section class="mt-20 mb-20">
+        <section class="mt-20 mb-20 mx-4 md:mx-0 lg:mx-0">
             <div class="space-y-4 text-center mb-10">
-                <h1 class="text-4xl font-extrabold">Latest Posts</h1>
-                <p class="text-[#12132D99] text-lg">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing
+                <h1 class="text-3xl md:text-4xl font-extrabold">Latest Posts</h1>
+                <p class="text-[#12132D99] text-base md:text-lg">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing
                     features allow for a streamlined .</p>
             </div>
             <!-- content section  -->
-            <div class="flex gap-5">
+            <div class="flex gap-5 flex-col md:flex-row">
                 <div class="rounded-3xl p-6 border-2 space-y-4">
                     <img class="w-full" src="./images/Rectangle 4.png" alt="">
                     <h3 class="flex gap-3"><img src="./images/cal.png" alt=""><p class="text-[#12132D99]">29 January 2024</p></h3>
@@ -219,9 +219,9 @@
     <!-- start footer section  -->
     <footer class="bg-[#f6f6f7] py-28">
         <div class="container mx-auto">
-            <div class="text-center space-y-6 border-b-2 pb-10">
+            <div class="text-center space-y-6 border-b-2 pb-10 mx-10 md:mx-0 lg:mx-0">
                 <img class="mx-auto" src="./images/logo.png" alt="">
-                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots <br> in a piece of classical Latin literature from 45 BC</p>
+                <p class="text-base md:text-lg">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots <br> in a piece of classical Latin literature from 45 BC</p>
                 <div class="text-3xl flex justify-center gap-5">
                     <i class="fa-brands fa-twitter"></i>
                     <i class="fa-brands fa-facebook"></i>
