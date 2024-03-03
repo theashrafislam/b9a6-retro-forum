@@ -55,9 +55,9 @@
                     <p class="text-base md:text-xl text-white leading-9">Share your favorite opinion and win and wp <br> forum coffee
                         mug!</p>
                     <div class="bg-white w-[350px] md:w-[400px] flex justify-between items-center p-2 gap-3 rounded-full">
-                        <input type="text" name="" id="" placeholder="Search here anything"
+                        <input id="search-field" type="text" name="" id="" placeholder="Search here anything"
                             class="w-full p-2 rounded-full">
-                        <button class="py-3 px-7 bg-[#797DFC] rounded-full text-white font-bold text-base md:text-lg">Search</button>
+                        <button class="py-3 px-7 bg-[#797DFC] rounded-full text-white font-bold text-base md:text-lg" onclick="searchBtn()">Search</button>
                     </div>
                 </div>
                 <div class="flex flex-col p-12 gap-5 w-[300px] mt-10 md:mt-0 md:w-[371px] bg-[#FFFFFF] rounded-3xl">
@@ -92,6 +92,12 @@
                 <p class="text-base md:text-lg">Yes, you can run unit tests and view the results directly within the app. The
                     <br>integrated testing features allow for a streamlined .</p>
             </div>
+
+            <!-- loading -->
+            <div class="flex justify-center items-center" id="loading">
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
+            <!-- loading -->
             <!-- content section  -->
             <div class="flex gap-8 mt-10 flex-col md:flex-row" >
                 <div class="w-full md:w-3/5 space-y-6" id="post-container">
@@ -231,6 +237,7 @@
     </main>
     <!-- End main section  -->
     <!-- start footer section  -->
+    
     <footer class="bg-[#f6f6f7] py-28">
         <div class="container mx-auto">
             <div class="text-center space-y-6 border-b-2 pb-10 mx-10 md:mx-0 lg:mx-0">

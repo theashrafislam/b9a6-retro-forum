@@ -1,18 +1,33 @@
-const allPost = async () => {
-    const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
-    const data = await res.json();
-    const posts = data.posts;
-    // console.log(posts);
-    allPostDisplay(posts);
+const showLoading = () => {
+    document.getElementById('loading').classList.remove('hidden');
+}
+const hideLoading = () => {
+    document.getElementById('loading').classList.add('hidden');
 }
 
+const allPost = async () => {
+    showLoading();
+    setTimeout(async () => {
+        const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
+        const data = await res.json();
+        const posts = data.posts;
+        allPostDisplay(posts);
+        hideLoading();
+    }, 2000)
+}
+
+const postContainer = document.getElementById('post-container');
 const allPostDisplay = (posts) => {
     // console.log(posts);
-    const postContainer = document.getElementById('post-container');
+
+    postDisplay(posts)
+}
+
+function postDisplay(posts){
+
     posts.forEach(post => {
         console.log(post);
         const div = document.createElement('div');
-        // div.classList.add(`w-full md:w-3/5 flex gap-4 bg-[#F3F3F5] p-6 rounded-3xl`);
         div.innerHTML = `
         <div class="w-full  flex gap-4 bg-[#F3F3F5] p-6 rounded-3xl">
                 <div class="w-1/6  md:pl-6">
@@ -45,7 +60,7 @@ const allPostDisplay = (posts) => {
                             </span>
                         </div>
                         <div>
-                            <button class="countButton" onclick="readBtn('${post?.title}', '${post?.view_count}')"><img src="./images/mes-box.png" alt=""></button>
+                            <button class="countButton" onclick="readBtn('${post?.title.replace(/'/g,'@')}', '${post?.view_count}')"><img src="./images/mes-box.png" alt=""></button>
                         </div>
                     </div>
                 </div>
@@ -55,14 +70,12 @@ const allPostDisplay = (posts) => {
     })
 }
 
-const titleCount = document.getElementById('title-count');
-const viewCount = document.getElementById('view-count');
 const titleViewCount = document.getElementById('titleViewCount');
 const read = document.getElementById('read');
 let readCount = 0;
 function readBtn(title, view){
-    // console.log('title', title)
-    // console.log('view', view)
+    console.log('title', title)
+    console.log('view', view)
     const div = document.createElement('div');
     div.classList.add('flex', 'justify-between', 'items-center', 'bg-[#FFFFFF]', 'gap-2', 'p-4', 'rounded-xl', 'mt-3');
     div.innerHTML = `
@@ -78,7 +91,6 @@ function readBtn(title, view){
     titleViewCount.appendChild(div);
 
 }
-
 
 const latestPosts = async () => {
     const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts');
@@ -108,8 +120,24 @@ const latestPosts = async () => {
     })
 }
 
+function searchBtn(){
+    const searchField = document.getElementById('search-field').value;
+    console.log(searchField)
+    search(searchField)
+    
+}
 
-
+const search = async (searchField) => {
+    postContainer.textContent = '';
+    showLoading();
+    setTimeout(async () => {
+        const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchField}`);
+        const data = await res.json();
+        const posts = data.posts;
+        postDisplay(posts);
+        hideLoading();
+    }, 2000)
+}
 
 allPost();
 latestPosts();
