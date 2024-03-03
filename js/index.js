@@ -32,8 +32,7 @@ function postDisplay(posts){
         <div class="w-full  flex gap-4 bg-[#F3F3F5] p-6 rounded-3xl">
                 <div class="w-1/6  md:pl-6">
                 <img class="absolute w-16 lg:w-24" src="${post.image}" alt="">
-                <div class="w-3 h-3 md:w-4 md:h-4 bg-green-500 rounded-full relative lg:top-[-8px] lg:ml-[0px] top-[-6px] left-[57px]"></div>
-                <div class="w-3 h-3 md:w-4 md:h-4 bg-red-500 rounded-full relative lg:top-[-8px] lg:ml-[0px] top-[-6px] left-[89px]"></div>
+                <div class="w-3 h-3 md:w-4 md:h-4 ${post.isActive?"bg-green-500":"bg-red-500"} rounded-full relative lg:top-[-8px] lg:ml-[30px] top-[-6px] left-[57px]"></div>
                 </div>
                     <div class="w-5/6">
                     <div class="flex gap-8 mb-2">
