@@ -6,7 +6,5 @@ body{
     font-family: "Mulish", sans-serif;
 }
 .gradient-span {
-    background-image: linear-gradient(to right, #797DFC 0%, #797DFC 100%);
-    color: transparent;
-    background-clip: text;
+    color: #797DFC;
 }

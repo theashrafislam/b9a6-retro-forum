@@ -12,6 +12,7 @@ const allPost = async () => {
         const data = await res.json();
         const posts = data.posts;
         allPostDisplay(posts);
+        latestPosts();
         hideLoading();
     }, 2000)
 }
@@ -139,4 +140,3 @@ const search = async (searchField) => {
 }
 
 allPost();
-latestPosts();
