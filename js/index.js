@@ -36,7 +36,7 @@ function postDisplay(posts){
                 </div>
                     <div class="w-5/6">
                     <div class="flex gap-8 mb-2">
-                        <span class="text-sm text-[#12132DCC] font-bold">${post?.category}</span>
+                        <span class="text-sm text-[#12132DCC] font-bold">#${post?.category}</span>
                         <p class="text-sm text-[#12132DCC] font-bold">Author: <span>${post?.author?.name}</span></p>
                     </div>
                     <div class="pb-6 border-b-2 border-dashed space-y-3">
