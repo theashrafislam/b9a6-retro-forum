@@ -32,7 +32,7 @@ function postDisplay(posts){
         div.innerHTML = `
         <div class="w-full  flex gap-4 bg-[#F3F3F5] p-6 rounded-3xl">
                 <div class="w-1/6  md:pl-6">
-                <img class="absolute w-16 lg:w-24" src="${post.image}" alt="">
+                <img class="absolute w-16 lg:w-24 rounded-xl" src="${post.image}" alt="">
                 <div class="w-3 h-3 md:w-4 md:h-4 ${post.isActive?"bg-green-500":"bg-red-500"} rounded-full relative lg:top-[-8px] lg:ml-[30px] top-[-6px] left-[57px]"></div>
                 </div>
                     <div class="w-5/6">
@@ -104,7 +104,7 @@ const latestPosts = async () => {
         const div = document.createElement('div');
         div.classList.add('rounded-3xl', 'border-2', 'space-y-4', 'p-6');
         div.innerHTML = `
-        <img class="w-full" src="${item?.cover_image}" alt="">
+        <img class="w-full rounded-2xl" src="${item?.cover_image}" alt="">
                 <h3 class="flex gap-3"><img src="./images/cal.png" alt=""><p class="text-[#12132D99]">${item?.author?.posted_date??"No publish date"}</p></h3>
                 <h1 class="text-lg font-extrabold">${item?.title}</h1>
                 <p class="text-base text-[#12132D99]">${item?.description}</p>
