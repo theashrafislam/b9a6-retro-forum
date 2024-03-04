@@ -8,3 +8,10 @@ body{
 .gradient-span {
     color: #797DFC;
 }
+#hoverDiv:hover{
+    background-color: #F1F2FF;
+    border: 2px;
+    border-style: solid;
+    border-radius: 24px;
+    border-color: #797DFC;
+}
